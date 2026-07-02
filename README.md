@@ -1,42 +1,40 @@
-# NLP_mediadata_classifier
+# NLP Portfolio
 
-This project focuses on crawling and processing comment data from Stack Overflow to build a classifier that helps users find answers more relevant to their questions.
+Two natural language processing projects completed during my Master of Data Science at the University of Adelaide. Both projects go through the full pipeline: data collection or cleaning, exploratory analysis, preprocessing, modelling, and evaluation.
 
----
+## Projects
 
-## Project Overview
+### 1. [Hotel Review Sentiment Classification](./1_hotel-review-sentiment-classification)
+Predicts customer sentiment from hotel review text using classic NLP feature extraction (TF-IDF, CountVectorizer) and a Multinomial Naive Bayes classifier, benchmarked against the VADER lexicon and a hybrid model that combines both. Also extends into aspect-level sentiment prediction with a multi-output classifier.
 
-- **Data Collection:** Crawl comment data from Stack Overflow.  
-- **Data Wrangling & Preprocessing:** Clean and prepare the raw data for modeling.  
-- **Classifier Building:** Develop a model to classify and rank comments based on their relevance.  
-- **User Interaction:** Allow users to retrieve information closely related to their queries.
+**Key skills:** text preprocessing, TF-IDF/CountVectorizer, Multinomial Naive Bayes, lexicon-based sentiment analysis (VADER), 10-fold cross-validation, multi-output classification
 
----
+### 2. [Stack Overflow Post Categorisation](./2_stackoverflow-post-categorisation)
+Builds an end-to-end system that collects Stack Overflow questions through the Stack Exchange API and automatically groups them into 12 NLP task categories. Compares a rule-based keyword model against sentence embedding similarity (SBERT, CodeBERT), with topic discovery via BERTopic and evaluation using silhouette score and cluster distance metrics.
 
-## Features
+**Key skills:** API-based data collection, BERTopic, sentence embeddings (SBERT/CodeBERT), cosine similarity, unsupervised evaluation, POS tagging and dependency parsing
 
-- Automated data crawling from Stack Overflow  
-- Data cleaning and preprocessing pipeline  
-- Classifier to identify relevant comments  
-- User-friendly retrieval system for targeted information  
+## Tech stack
 
----
+Python, pandas, scikit-learn, NLTK, spaCy, Sentence-Transformers, BERTopic, matplotlib/seaborn
 
-## Usage
+## Structure
 
-1. Run the crawler to gather comment data.  
-2. Preprocess the data to clean and structure it.  
-3. Train the classifier model on the prepared dataset.  
-4. Query the system to get relevant comment information based on user input.
+```
+NLP-Portfolio/
+├── .env.example
+├── .gitignore
+├── README.md
+├── 1_hotel-review-sentiment-classification/
+│   ├── README_hotel-review-sentiment-classification.md
+│   └── hotel-review-sentiment-classification.ipynb
+└── 2_stackoverflow-post-categorisation/
+    ├── README_stackoverflow-post-categorisation.md
+    └── stackoverflow_post_categorisation.ipynb
+```
 
----
+Each project folder has its own README with dataset details, methodology, and results.
 
-## Technologies Used
+## Note on AI tool use
 
-- Web scraping tools  
-- Data preprocessing libraries (e.g., pandas, nltk)  
-- Machine learning frameworks for classification  
-
----
-
-Feel free to contribute or raise issues to improve the project!
+Some notebook cells include short comments marking where an AI assistant (GPT-4o) was used to help organise imports or explain a library function. This reflects how the code was actually written and is kept for transparency.

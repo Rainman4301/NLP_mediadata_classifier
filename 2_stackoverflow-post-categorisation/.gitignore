@@ -1,0 +1,27 @@
+# --- Secrets ---
+.env
+.gitattributes
+
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- OS / editor junk ---
+.DS_Store
+Thumbs.db
+.vscode/
+
+# --- Raw data (large files; keep out of git, describe in README instead) ---
+data/
+pictures/
+*.json
+*.JSON
+
+# --- Course-specific files not meant for a public portfolio ---
+check.json
+*.docx
